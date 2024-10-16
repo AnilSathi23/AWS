@@ -14,3 +14,12 @@ https://docs.aws.amazon.com/pdfs/whitepapers/latest/aws-overview/aws-overview.pd
 https://www.pluralsight.com/resources/blog/cloud/your-aws-terminology-cheat-sheet
 
 https://aws.amazon.com/blogs/compute/aws-compute-optimizer-supports-aws-graviton-migration-guidance/
+
+
+![alt text](image.png)
+
+AWS Certified Cloud Practitioner (CLF-C02): Storage, Networking, and Databases
+
+https://aws.amazon.com/s3/storage-classes/
+
+https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html
