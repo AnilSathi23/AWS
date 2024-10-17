@@ -33,14 +33,31 @@ Compute
 Benefits
 EC2 Storage
 Instace Types
-AMI: Amazon machine image
+AMI: Amazon machine image 
 Information about EC2 instance that we are going to launch
+
+OS
+Software
+Instance
+EBS
 
 Placement Group
 Metadata
+
+
+Day 3
+
 EC2 purchasing options
 Hibernation
-EBS
+EBS & Encryption
+Elastic Load Balancer
+Autoscaling
+
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
 
 
 
