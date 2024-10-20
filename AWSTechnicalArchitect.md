@@ -61,6 +61,44 @@ Autoscaling
 
 
 
+Crating a S3 bucket and uploading a file using cloudshell
+
+[cloudshell-user@ip-10-134-45-239 ~]$ aws --version
+aws-cli/2.18.4 Python/3.12.6 Linux/6.1.109-118.189.amzn2023.x86_64 exec-env/CloudShell exe/x86_64.amzn.2023
+[cloudshell-user@ip-10-134-45-239 ~]$ aws s3 mb s3://mybuckt-anilkuamarsathi
+make_bucket: mybuckt-anilkuamarsathi
+[cloudshell-user@ip-10-134-45-239 ~]$ aws s3 ls
+2024-10-17 12:45:27 mybuckt-anilkuamarsathi
+[cloudshell-user@ip-10-134-45-239 ~]$ echo "My New File" >> file.txt
+[cloudshell-user@ip-10-134-45-239 ~]$ ls
+file.txt
+[cloudshell-user@ip-10-134-45-239 ~]$ cat file.txt
+My New File
+[cloudshell-user@ip-10-134-45-239 ~]$ aws s3 cp file.txt s3://mybuckt-anilkumarsathi
+[cloudshell-user@ip-10-134-45-239 ~]$ aws s3 cp file.txt s3://mybuckt-anilkuamarsathi
+upload: ./file.txt to s3://mybuckt-anilkuamarsathi/file.txt       
+[cloudshell-user@ip-10-134-45-239 ~]$ aws s3 ls s3://mybuckt-anilkuamarsathi
+2024-10-17 12:49:34         12 file.txt
+
+
+Day 4:
+
+Auto Scaling and its types
+
+    Scheudule Scaling (During peek season)
+    Dynamic Scaling ()
+    Predictive Scaling (Using Histrorical Data)
+
+Storage
+Intro S3
+Components of S3
+S3 storage classes
+Versioning
+Cross Region Replication
+S3 Life Cycle management
+S3 Encryption
+Storage gateway
+
 
 
 
