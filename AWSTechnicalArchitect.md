@@ -114,7 +114,7 @@ Athena and Glue
 
 Networking Basics
 Firewall
-NACL
+NACL ( Is Stateless)
 Security Groups
 Internet gateway
 Route Table
@@ -252,4 +252,74 @@ Protocol that we use in VPN Connection is IPSEC Protocol
 
 ![alt text](image-9.png)
 
+DAY 7:
+
+1)CloudFront
+2)Lambda and Edge
+3)Gbal Accelrator
+4)Route53 and policies
+5)Database (Types and DB and RDS)
+
+
+CloudFront is a global content delivery network service which is designed to Securely and efficiently sistribute content to end user 
+ensuring low latency and high transfer.
+
+The accelration is achieved by caching the content.
+
+![alt text](image-10.png)
+
+Steps for CloudFront
+1) Define Origin Server
+2) upload data
+3) Create CloudFront Distribution
+
+OAI( Origin Access identity )
+Helps securely server private content 
+
+Global Accelrator
+Is specially designed to enhance application performance
+
+https://speedtest.globalaccelerator.aws
+
+NVirgina 11% faster
+Oregon  33% faster
+Ireland 34% faster
+Frankfurt 72% faster
+Zurih 35% faster
+Tokyo 82% faster
+Singapore 32% faster
+
+
+![alt text](image-11.png)
+
+Features of Route53
+1) Resolver
+2) Traffic flow: It route the end user to the best route
+3) Latency Based routing : Route the user to the route that has low latency
+4) GEO DNS :  Route the user based on Geopgrahic location
+5) Health Checks and monitoring: Monitors health and latency
+6) Domain Registration: godaddy is popular domain registration company
+
+
+Hosted Zone: Collection of DNS records
+1) Public Hosted Zones ( Route the traffic over internet)
+2) Private Hosted Zones (Route the traffic over  VPC )
+
+DNS records defines how the traffic is routed
+
+Route53 policies
+
+![alt text](image-12.png)
+
+![alt text](image-13.png)
+
+Shrink: Reduction in volume size
+
+![alt text](image-14.png)
+
+![alt text](image-15.png)
+
+Databases
+
+![alt text](image-16.png)
 
