@@ -323,3 +323,129 @@ Databases
 
 ![alt text](image-16.png)
 
+
+Day 8
+
+1) RDS
+2) RDS replica
+3) Multi AZ deployment
+4) Aurora
+5) Dynamo DB
+6) Global tables
+7) Case study 
+8) In memory database
+9) Redshift
+
+RDS: Relational Database Service : It simplifies the process of setting up, operating and also scaling in AWS cloud.
+RDS is fully managed service (Backup, Software Patching, Hardware provisioning is handled).
+Scalability is easy and can be used to manage the growing demands of the application.
+
+Data is encrypted at REST and In transit
+
+Integrated with IAM
+
+Pay as you go model for pricing
+
+MySQL, POST GRES, oracle, maria db etc
+
+
+DBInstance is a fundamental building block of RDS. Standalone database that runs on AWS cloud
+
+DB Instance is a core component of the database.
+
+1) Standalone environment. Provides isolation
+2) Multi database capacity: using RDS we can manage multiple database
+3) can use RDS using console, SDK
+
+RDS classes
+1) General Purpose: Best fit for small and medium scale
+2) Memory Optimized: High memory intensive application (ETL, Analytics, Caching). High through put tasks
+3) Bustable performance: Flexible CPU usage but there will be a burst(short period of time there is huge amount of traffic).
+
+
+Upto 40 DB instances can be created per region per account.
+
+Backups
+
+1) Automated Backups: Backup every 30 mins, the backups are available for 35 days
+2) Point in time: Backup during a specific time
+3) Database Snapshot: Are user initated backups
+4) Snapshot copies: 
+5) Snapshot sharing:
+
+Multi AZ deployment: Replicates syncronously replicates to a standup instance available in different AZ.
+
+
+![alt text](image-17.png)
+
+Read replica is used for enhanced perforance and increased availability and designed for security durability of RDS 
+
+1) enhanced perforance 
+2) increased availability 
+3) designed for security
+
+Amazon Aurora
+
+Amazon version of database with Speed + availablity
+
+upto 5 times faster than a standard mysql database
+upto 3 times faster than a postGresSQL database
+
+Aurora maintains 6 copies of data
+
+![alt text](image-18.png)
+
+![alt text](image-19.png)
+
+Aurora Serverless
+
+Types 
+V1 -- Simple and cost effective option
+V2 -- Built on the foundation of V1 offer more advanced features. Scalability and seamless for demanding workload. Instant scalability is not available. Samsung and panasonic are customers of aurora
+
+Multimaster
+
+![alt text](image-20.png)
+
+DynamoDB
+More popular no sql database
+Fully Managed no sql database service that provides fast and predictable service
+Offers Encryption at Rest
+Offers fast and predictable performance
+Scalability without effort
+Enterprise readiness
+Consistent single digit millisecond response time
+
+Read Consisteny in Dynamo DB
+    1) Eventually Consistent Reads
+    2) Strongly Consistent Reads
+
+
+![alt text](image-21.png)
+
+Global Tables
+1) Fully Managed
+2) Multi Region
+3) Multi Master
+
+database that delivers fast
+
+GSI(Global Secondary Index) where there is an option to query in multiple partitions
+
+LSI (Local Secondary Index) where there is an option to query in specific partitions
+
+zoom and Snapchat are the customer of Dynamo DB
+
+https://www.duolingo.com/ 
+uses dynamoDB
+
+
+
+
+
+
+
+
+
+
+
