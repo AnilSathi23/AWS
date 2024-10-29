@@ -440,6 +440,34 @@ https://www.duolingo.com/
 uses dynamoDB
 
 
+Day 9
+
+1) Elastic Cache
+2) Redshift
+3) Security, IAM
+4) Shared resonsibility model
+5) Federation
+6) Delegation
+7) IAM principles
+8) Pounosis
+9) ARN
+10) Control Tower
+11) Cognito
+12) AWS WAF
+
+https://aws.amazon.com/elasticache/redis-vs-memcached/
+
+
+Redshift popular customers
+
+Lexis nexus
+Nasdac
+MagilaRX
+
+
+
+
+
 
 
 
