@@ -11,7 +11,7 @@ Regions
 Core services 
 Account Setup
 AWS Console
-Billing
+BillingVP
 Delegation to users and roles
 AWS Organization
 
@@ -129,6 +129,8 @@ Expigration Action : Deletion of the object after a certial period.
 this is an xml file
 
 Access control List: Basic r/w permissions
+
+
 
 
 FSX will launch, runs and scale
@@ -464,6 +466,71 @@ Lexis nexus
 Nasdac
 MagilaRX
 
+
+Day 10
+
+1) AWS Cognito
+2) AWS Control Tower
+3) AWS WAF
+4) Shield
+5) Config
+6) Secret Manager
+7) Trusted Advisor and inspector
+8) Guard duty
+9) Mauip
+
+AWS Cognito: Authentication, User Management, Security features
+
+User poal
+Identity Poal
+
+Can the user pool and identity pool be isolated to a specifc VPC?
+
+WIZ uses AWS Cognito
+
+Control Tower extends the capacity of AWS Organization
+
+Landing Zone: Is a starting point from which we can deploy your application.
+
+
+AWS web application firewall
+
+
+![alt text](image-22.png)
+
+![alt text](image-23.png)
+
+![alt text](image-24.png)
+
+Day 11
+Serverless
+Lambda
+API gateway
+Simple Queue Service
+Simple Notification Service
+
+Day 12
+Kinesis & its types
+Monitoring and Automation
+Cloudwatch Service
+Metrics
+Alarm and it States
+Cloud Formation
+Template & Stack
+Best practices for Cloud Formation 
+
+
+Kinesis is designed to handle data in realtime 
+
+![alt text](image-25.png)
+
+
+![alt text](image-26.png)
+
+![alt text](image-27.png)
+
+
+[examtopics/exams/amazon](https://www.examtopics.com/exams/amazon/aws-certified-solutions-architect-associate-saa-c03/view/)
 
 
 
