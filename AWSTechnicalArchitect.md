@@ -15,6 +15,21 @@ BillingVP
 Delegation to users and roles
 AWS Organization
 
+Light sail is the preconfigured EC2 computer service unlike regular EC2 which needs some amount of work that is needed to install the required 
+software applications. Bundled into one simple price.
+
+AWS Batch enabled devlopers to run thousands of compute services.
+
+Elastic Bean stack is a service that is used to deploy web applications developed with Java, .Net, PHP, Python, Ruby or docker on servers 
+such as Apache, IIS or NGNIX
+
+Fargate is another option to run containers. ECS (run containers in EC2 and in Fargate).All that we need to specifiy is the cpu and memory that 
+we need and AWS will create a continer for us.
+
+Lambda is a service created to run the code without the server. Source code which is in functions. We only pay for the time which it is running
+
+SAR(Serverless Application Repository) is a AWS template application repository to deploy code.
+
 Day 2:
 
 IAM (AWS identity and access Management)
