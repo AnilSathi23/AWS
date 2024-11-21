@@ -8,7 +8,7 @@ AWS Firewall Manager is a service for security management and enables you to per
 
 Amazon macie is fully managed service providing data security and privacy. It utilizes machine learning and pattern matching for monitoring and protecting sensitive data on AWS system. Macie provides automation for discovering sensitive data in S3 buckets This data can include both PII and financial data.
 
-AWS Resource Access Manager(AWS RAM) This is an AWS Service used for sharing resources securely accross multiple AWS accounts and within organizaitonal units and organizations. AWS RAM enables respire sharing with AWS IAM usersa nd roles for various resource types, allowing you to create a resource once and then use AWS RAM  to share that resource with other accounts.
+AWS Resource Access Manager(AWS RAM) This is an AWS Service used for sharing resources securely accross multiple AWS accounts and within organizaitonal units and organizations. AWS RAM enables respire sharing with AWS IAM users and roles for various resource types, allowing you to create a resource once and then use AWS RAM  to share that resource with other accounts.
 
 AWS Trusted Advisor gives you the ability to validate service limits using the performance category. This section shows you the different types of limits and usage information related to the AWS resource you are currently using. For example, if you are using an application programming interface (API) gateway, then you can modify the throttle rate based on your account Region. Here you can increase the throttle rate by ten thousand requests per second. You can also increase Auto Scaling limits and discovery service limits. This resource allows you to increase performance while following best practices within the industry.
 
@@ -38,11 +38,11 @@ Amazon Redshift is a petabyte-scaled infrastructure that is considered a data wa
 
 Customer-specific controls are very specific in that the overall controls and responsibilities fall to the customer. They are responsible for support in all manners, which includes the creation, installation, and development of applications that reside on top of an Amazon Elastic Compute Cloud (EC2) infrastructure. Customers are also responsible for patching, configuration, and training, but these are considered shared by both Amazon and customers. Customer-specific controls are network traffic, data identity and integrity, client and server-side data, encryption, and authentication.
 
-Patch Management controls is not correct because this is a shared control, which means that AWS is responsible for patching the underlying AWS platform and the customer is responsible for patching software that resides on top of the AWS EC2 instance.
+Patch Management controls is a shared control, which means that AWS is responsible for patching the underlying AWS platform and the customer is responsible for patching software that resides on top of the AWS EC2 instance.
 
-Configuration Management controls is not correct because this is also a shared control, which means that AWS is responsible for configuration infrastructure devices associated with the network and the customer is responsible for supporting their own operating systems and applications that they use on the AWS platform.
+Configuration Management controls is also a shared control, which means that AWS is responsible for configuration infrastructure devices associated with the network and the customer is responsible for supporting their own operating systems and applications that they use on the AWS platform.
 
-Awareness and Training controls is not correct because this is not a customer-specific control but a shared control. This means that customers are responsible for learning and training their own people and AWS is responsible for the awareness and training of AWS resources.
+Awareness and Training controls is not a customer-specific control but a shared control. This means that customers are responsible for learning and training their own people and AWS is responsible for the awareness and training of AWS resources.
 
 A Convertible Reserved Instance can be exchanged within the same term and you can easily select new instance attributes such as instance type and platform. You can also change the instance family scope and tenancy. There are no limitations on the number of times you exchange your instance. The only requirement is that the instance type you are changing to has to be of higher or equal value to the original instance.
 
@@ -126,9 +126,9 @@ You will not use AWS Marketplace. This is a digital library that contains thousa
 
 You can create theree customer support cases using AWS support
 
-a) Account and billing
-b) Service limit increase
-c) Technical support
+-Account and billing
+-Service limit increase
+-Technical support
 
 You cannot create technical support cases if you have a Basic support plan. 
 
@@ -154,4 +154,44 @@ Savings Plan model is not the right choice for workloads that are interruptible,
 On-Demand Instances are not suitable for interruptible workloads. On-Demand Instances are suited for workloads that are irregular but not interruptible. They are ideal for testing applications. They do not need upfront payments and can be paid for based on usage. 
 
 Dedicated Hosts are not suitable for irregular workloads and are the most expensive of all instance options. These are actual physical servers that have Amazon EC2 instances and completely dedicated to the customer that has purchased them. This allows customers to utilize their existing per-Virtual Machine (VM), per-socket, or per-core licenses that ensures license compliance. You can purchase On-Demand Dedicated Hosts as well as Dedicated Hosts Reservations.
+
+You would use AWS Data Exchange. This allows you to locate and use third-party information that is related to sustainability. It provides you access to data sets which are accessible through the Open Data Sponsorship Program and Amazon Sustainability Data Initiative. AWS collaborates with companies for making environmental, social, and governance (ESG), weather, satellite imagery, and air quality data accessible to clients.
+
+You would not use AWS Trusted Advisor. AWS Trusted Advisor is a tool that indicates how you should provision your AWS resources as per AWS best practices. It performs real-time monitoring of your AWS resources and recommends actions accordingly.
+
+You would not use AWS Outposts. AWS Outposts allows a company to use AWS services in their own datacenter or company building. It creates a miniature Region in a datacenter, providing all AWS services in an isolated, private location. This is an example of a hybrid cloud approach.
+
+You would not use AWS Storage Gateway. AWS Storage Gateway provides secure and seamless access for on-premises systems and applications to unlimited storage on AWS.
+
+Oracle is a relational database solution offered by Amazon Relational Database Service (RDS). Amazon RDS offers several different types of databases, including Microsoft SQL server, MySQL, MariaDB, Oracle, Amazon Aurora, and PostgreSQL. Amazon RDS currently supports Oracle Database versions 21c (21.0.0.0) and 19c (19.0.0.0). Support for Oracle 12c was deprecated in 2022.
+
+NoSQL is considered a non-relational database solution and is not offered within Amazon’s RDS product.
+
+DB2 is also considered non-relational and is owned by IBM. This database technology focuses on object-oriented applications and is not offered by the Amazon RDS product.
+
+Amazon Glacier is an AWS storage solution optimized for infrequently used data or data that is considered cold. This is a storage option and not a database instance type.
+
+Amazon’s shared responsibility model states that the customer is responsible for all aspects of creating and managing Amazon Machine Image (AMI) components used within their respective Amazon Elastic Compute Cloud (EC2) infrastructures. Customers are also responsible for configurations, policies, data stores, data at rest, data in transit, applications, and operating systems.
+
+Customers are not responsible for virtualization infrastructures, network infrastructures, facilities, or the physical security of the hardware.
+
+For protecting data at rest, customers can set up and configure partition, file, or volume encryption at the application level. If you have data integrity concerns, then you can set up versioning within Amazon Simple Storage Service (S3) and configure digital signatures or authentication encryption in other Amazon services as well. Accidental deletes can be solved with multi-factor authentication (MFA) and versioning. Lastly, when it comes to hardware or software availability as it relates to a DR situation, you can use replicas and data replication solutions to recover your most critical areas.
+
+For protecting data in transit, the customer can configure Internet Protocol Security (IPSec), Encapsulating Security Payload (ESP) and secure sockets layer/transport layer security (SSL/TLS). They can also use X.509 certificates to authenticate the remote end destination.
+
+Amazon is responsible for the facilities, virtualization and network infrastructures, and for the physical security of the hardware.
+
+-AWS is responsible for fixing flaws within the infrastructure and patching, but customers patch their own guest applications and OSes. 
+
+-AWS actively supports infrastructure devices, customers are responsible for databases, applications, and operating systems.
+
+-AWS actively supports infrastructure devices, customers are responsible for databases, applications, and operating systems.
+
+Entity lifecycle tracking is a focal point of expenditure awareness within an AWS environment. You can identify resources that are not being used or track projects that have missing or unused resources. You can also use AWS configuration resources for identifying assets within inventory. Amazon CloudWatch and CloudTrail are used for analyzing lifecycle events within your system.
+
+Tagging is primarily used for billing purposes. It allows you to create business categories and then apply pseudo-tags to those resources so that you can run detailed billing reports.
+
+Cost attribution is focused more on the costs of your AWS resources as they relate to your financial goals and less on tracking unused resources.
+
+Stakeholders refer to relevant human resources that make financial decisions based on specific business needs, and include Chief Financial Officers (CFOs), business unit leaders, tech leads, and key third parties.
 
