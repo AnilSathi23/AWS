@@ -126,9 +126,9 @@ You will not use AWS Marketplace. This is a digital library that contains thousa
 
 You can create theree customer support cases using AWS support
 
--Account and billing
--Service limit increase
--Technical support
+- Account and billing
+- Service limit increase
+- Technical support
 
 You cannot create technical support cases if you have a Basic support plan. 
 
@@ -181,11 +181,11 @@ For protecting data in transit, the customer can configure Internet Protocol Sec
 
 Amazon is responsible for the facilities, virtualization and network infrastructures, and for the physical security of the hardware.
 
--AWS is responsible for fixing flaws within the infrastructure and patching, but customers patch their own guest applications and OSes. 
+- AWS is responsible for fixing flaws within the infrastructure and patching, but customers patch their own guest applications and OSes. 
 
--AWS actively supports infrastructure devices, customers are responsible for databases, applications, and operating systems.
+- AWS actively supports infrastructure devices, customers are responsible for databases, applications, and operating systems.
 
--AWS actively supports infrastructure devices, customers are responsible for databases, applications, and operating systems.
+- AWS actively supports infrastructure devices, customers are responsible for databases, applications, and operating systems.
 
 Entity lifecycle tracking is a focal point of expenditure awareness within an AWS environment. You can identify resources that are not being used or track projects that have missing or unused resources. You can also use AWS configuration resources for identifying assets within inventory. Amazon CloudWatch and CloudTrail are used for analyzing lifecycle events within your system.
 
