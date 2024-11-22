@@ -195,3 +195,193 @@ Cost attribution is focused more on the costs of your AWS resources as they rela
 
 Stakeholders refer to relevant human resources that make financial decisions based on specific business needs, and include Chief Financial Officers (CFOs), business unit leaders, tech leads, and key third parties.
 
+You would use Amazon AppStream. AppStream enables users to access desktop applications instantly from any location. The AWS resources needed to run the applications are managed by AppStream which provides automatic scaling. AppStream's automatic scaling feature automatically adjusts infrastructure to match user demand, optimizes resource utilization for both performance and cost, and eliminates manual capacity planning and management. Application streaming can be done using an HTML5-capable web browser or the AppStream client. AppStream is suited to hosting a specific application on AWS, while Amazon WorkSpaces is used for creating virtual desktops for a team.
+
+You would not use Amazon WorkSpaces. Amazon WorkSpaces enables you to provision workspaces which include virtual desktops for Ubuntu Linux, Microsoft Windows, or Amazon Linux. This removes the need for you to acquire hardware or install software. WorkSpaces allows users to access virtual desktops using a browser. Amazon WorkSpaces Web is a WorkSpaces capability suitable for web-based workloads that are secure.
+
+You would not use Amazon Connect. This is a cloud contact center service that enables you to use omnichannel communications for creating personalized experiences for your users. With Amazon Connect, you can offer chat and voice support using factors such as tentative wait times and customer preferences.
+
+You would not use AWS Data Exchange for this scenario. AWS Data Exchange is an AWS service that can be used by AWS customers to locate and use third-party data on AWS. It allows subscribers to find data products from qualified data providers and subscribe to these products. For data providers, AWS Data Exchange removes the requirement for building and maintaining technology for data delivery or billing.
+
+
+In order to create a public subnet and have that subnet use the Internet, you have three critical tasks that must be done:
+
+- Configure the security group and network access control list (NACL) to permit Internet traffic from and to your Amazon Elastic Compute Cloud (EC2) instance.
+- Create a subnet rule that sends non-local traffic using (0.0.0.0/0) to the Internet Gateway (IGW).
+- Attach an IGW component to the virtual private cloud (VPC) in question.
+
+You would not remove an IGW from your Amazon VPC. One of the key steps for creating a public subnet is to attach the IGW to your VPC.
+
+You do not have to call AWS Support to make this happen. However, they can help you with getting it done.
+
+You would not use a route table rule to send only local traffic to the IGW. To receive Internet traffic on your public subnet, you must send all non-local traffic to your IGW.
+
+
+You would enable detailed monitoring for each Amazon Elastic Compute Cloud (EC2) instance and you would use CloudWatch to create your standard dashboard. The CloudWatch dashboard can be easily customized to view different Regions of EC2 instances or even a single view to monitor metrics and alarms for a set of AWS resources. With Amazon CloudWatch, you can receive several different types of metrics from your Amazon EC2 instances and, with detailed monitoring, you can enable one-minute monitoring.
+
+Using basic monitoring to display the CPU metrics does not meet the requirements to have monitoring every minute. Basic monitoring covers only five-minute increments.
+
+Creating a dashboard in CloudTrail is not correct because this AWS resource is only used for logging via an application programming interface (API).
+
+Amazon DynamoDB offers encryption at rest by implementing AWS Key Management Service (KMS). Encryption at rest can only be implemented when the new DynamoDB table is created. You cannot alter the table to add it later, it must be done at the time of creation. Amazon recommends the encryption at rest option for data that is considered sensitive. This option reduces the difficulties, such as time and cost, in protecting critical data.
+
+You can create a table with encryption at rest enabled using either the Amazon DynamoDB console or the CLI command 
+aws dynamodb create-table with the SSEDescription parameter set to status: Enabled
+
+Encryption at rest is not enabled when the first rows of data enter the table because encryption is applied at the structural level, and only during the creation of the table object. For the same reason, it cannot be enabled using an ALTER TABLE command.
+
+Only when you create a new table structure within the US East (Ohio) Region is incorrect because Amazon offers encryption at rest in several AWS Regions. They include US East, US West, Canada, South America, Asia, and many more.
+
+Cost Optimization is a framework pillar that supports the improvement and efficiencies of an AWS infrastructure over a complete lifetime. The purpose for Cost Optimization is to meet functional requirements while achieving the smallest price point available. From a design perspective, its principles are overall efficiency, consumption modeling, not spending money on data centers, analyzing expenditures, and using managed services.
+
+Performance Efficiency is a framework pillar that supports computing resources to maintain and meet business requirements as technologies change over time within the AWS infrastructure. The focus is on performance rather than cost.
+
+Storage is a sub-component found under the performance efficiency pillar. Storage refers to the different types of storage relating to file, block, and object level storage. This is not related to the cost pillar.
+
+Reliability is focused on the stability of AWS systems and their ability to support business value with long uptimes and durable systems. This pillar is not focused on cost but rather the durability and uptime of an AWS resource.
+
+A Gateway type endpoint does not require an Internet gateway and has a primary function to link communication between AWS services and your logical VPC. This particular endpoint only works with an Amazon DynamoDB and the Amazon Simple Storage Service (S3) services. The Amazon Virtual Private Cloud (VPC) only consists of two unique endpoints called Interface type endpoints and Gateway type endpoints.
+
+An Interface type endpoint creates a private connection to AWS services on your side of the network that links your company resources to Amazon AWS using Direct Connect. This type of endpoint uses more services than just Amazon DynamoDB and Amazon S3 services.
+
+VPC peering uses private IPv4 or IPv6 addresses to connect Amazon VPCs in the same Region, in different Regions, or in different AWS accounts, allowing them to communicate as though they were in the same network. They do not focus on AWS services related only to DynamoDB and Amazon S3 components.
+
+A virtual private cloud (VPC) is a logical entity that gives you the ability to create subnets, modify IP address ranges, change network gateways, configure route tables, and modify advanced security settings to build your own logical network.
+
+
+The AWS Partner Network (APN) uses expertise, programs, and resources for building and selling customer offerings through a global community of partners. Some key benefits that are available to AWS Competency, Service Ready, Service Delivery, and Managed Service Provider (MSP) partners are:
+
+- Recognition through increased visibility with AWS Sales and customers
+- Expert engagement via increased technical capabilities with co-sell strategies with AWS experts
+- Financial incentives including more credits and funding based on specializations you have
+
+A related entity is AWS Professional Services which is a global team that provides high-touch assistance to AWS customers for their public sector cloud transformation. The team can help speed up the business outcomes of customers through the innovative use of AWS systems. Similarly, AWS Solutions Architects are professionals who can design AWS solutions that are performance and cost optimized based on the AWS Well-Architected Framework.
+
+You would not use the AWS Service Catalog. The AWS Service Catalog allows system administrators to manage and distribute selections of products to end users who can then utilize them from their own personalized portals.
+
+You would not use AWS Direct Connect. This is a networking connection that links your on-premises network to the AWS network. The connection is made with a common grade Ethernet fiber-optic cable.
+
+You would not use AWS Trusted Advisor. AWS Trusted Advisor is a tool that indicates how you should provision your AWS resources as per AWS best practices. It performs real-time monitoring of your AWS resources and recommends actions accordingly.
+
+The Effects section of an AWS Identity and Access Management (IAM) policy determines the behaviors and actions of what the policy will allow. You have to understand the effects of what occurs when a user might request access by either allowing or denying the request. Because the default option is to deny everything within the first type of requests, you have to grant specific permissions that you might need.
+
+Actions is not correct because every AWS service consists of its own group of actions. If you do not specify an action, then those action options are always denied. This is a safeguard that protects the AWS infrastructure and is used as a separate security option.
+
+Resources is not correct because this section is all about determining which resources are going to be associated with what actions.
+
+IAM permission boundaries is not correct because these set permissions that limit users from doing anything outside of the dominion.
+
+When your virtual private cloud (VPC) is created, it automatically comes with a route table that can be modified. When you first create a VPC, it comes with an implied router or a default router. This router is called the main route table. You also have the ability to create custom route tables based on your business requirements. Subnets are directly associated with your route tables. If your subnet is not specified then the subnet uses the main route table and not your custom route table.
+
+It is not true that for new VPC environments, you are required to create a route table. When your VPC first gets created, it comes with a default route table.
+
+It is not true that for new VPC environments, you are required to create a route table. When your VPC first gets created, it comes with a default route table.
+
+Subnets are used by AWS route tables. Each subnet is required to be associated with a route table. The subnets control the flow of traffic through a specific route and that route uses unique rules to move the traffic to the proper destination.
+
+You will use Amazon AppStream 2.0. AppStream 2.0 enables users to access desktop applications instantly from any location. The AWS resources needed to run the applications are managed by AppStream 2.0 and provides automatic scaling. Application streaming can be done using an HTML5-capable web browser or the AppStream 2.0 client. AppStream is suited towards hosting a specific application on AWS while Amazon WorkSpaces is for creating virtual desktops for a team.
+
+You will not use Amazon WorkSpaces. Amazon WorkSpaces enables you to provision WorkSpaces which include virtual desktops for Ubuntu Linux, Microsoft Windows, or Amazon Linux. This removes the need for you to acquire hardware or install software. WorkSpaces allows users to access virtual desktops using a browser or other devices. Amazon WorkSpaces Web is a WorkSpaces capability suitable for web-based workloads that are secure.
+
+You will not use Amazon Connect. This is a cloud contact center service that enables you to use omnichannel communications for creating personalized experiences for your users. With Amazon Connect you can offer chat and voice support using factors like tentative wait times and customer preferences.
+
+You will not use AWS Data Exchange for this scenario. AWS Data Exchange is an AWS service that can be used by AWS customers to locate and use third-party data on AWS. It allows subscribers to find many data products from qualified data providers and subscribe to these products. For data providers, AWS Data Exchange removes the requirement for building and maintaining technology for data delivery or billing.
+
+Virtual Private Cloud (VPC) Flow Logs is an Amazon feature that gives you the ability to gather details regarding IP addresses going from and to different network components within your VPC. All of this data is stored in Amazon CloudWatch logs. Once the data is stored within the CloudWatch logs, you can retrieve and view the data appropriately. You are not charged for using VPC Flow Logs, but you are charged for using Amazon CloudWatch logs.
+
+VPC peering uses private IPv4 or IPv6 addresses to connect Amazon VPCs in the same Region, in different Regions, or in different AWS accounts, allowing them to communicate as though they were in the same network. VPC peering is a highly recommended solution for connecting several Amazon VPCs within an individual Region. This resource is not used for gathering IP address information.
+
+An AWS Direct Connect is a private connection that links your remote network to an Amazon VPC. Another way of describing an AWS Direct Connect is a link between your on-premises network and your Amazon VPC. This is not an Amazon feature for gathering statistics associated with IP address connections.
+
+A VPC is a logical entity that gives you the ability to create subnets, modify IP address ranges, change network gateways, configure route tables, and modify advanced security settings to build your own logical network. This is not a tool used for gathering IP address information.
+
+Amazon recommends that data in transit should be encrypted using Secure Sockets Layer/Transport Layer Security (SSL/TLS) or IPSec ESP. Amazon supports IPSec, which is Internet Protocol Security, used in combination with a virtual private network (VPN) network. ESP stands for Encapsulating Security Payload, which is a protocol that can protect data integrity and create authentication for network packets, or what is referred to as payloads, that can be encrypted/decrypted. You could also use both forms of encryption (SSL/TLS and IPSec ESP). When it comes to accidental disclosure of private information, you should always limit access. Amazon describes the concern of having confidential information touch a public network, which should always have a basic level of encryption.
+
+You would not use Amazon Simple Storage Service (S3) Lifecycles in this scenario. You can add rules to the configuration of an S3 Lifecycle which makes S3 move objects from one storage class to another. An S3 Lifecycle configuration is made using an eXtensible Markup Language (XML) file that contains rules and actions to be performed on S3 objects in the object lifecycle. Class transitions can be done through a waterfall model, which means that objects stored with higher storage classes can be transitioned to lower storage tiers.
+
+Amazon uses encryption server side to encrypt customer data on the physical server, and the entire process is holistic or transparent because it is executed on the server side and not the client side. Client-side encryption is handled by the end-user or customer. Again, this is encryption for data at rest.
+
+A digital signature is a way to sign a digital document using encryption that involves the use of digital codes. Amazon uses AWS Signature Version 4, which uses an access secret key that will then be used to create a signing key. This new key or the signing key can only be used within a uniquely identified AWS Region. It is not concerned with protecting data in transit.
+
+You would use Amazon CloudFront. CloudFront is a content delivery network (CDN) that caches copies of data at locations around the world near customers. Caching copies of data locally near customers helps send data, applications, and videos to your customers with low latency and high speeds. To do this, CloudFront uses Edge locations, which are sites around the globe that speed up the delivery of content to users. Edge locations run a combination of CloudFront and Route53 for ensuring customers access the correct web addresses with low latency. CloudFront gets its files from an origin location that can be an Amazon S3 bucket or a web server.
+
+You would not use AWS Outposts. AWS Outposts allow a company to use AWS services inside of their own data center or company building. Outposts create a miniature Region inside of a data center, providing all AWS services in an isolated private location. This is an example of a hybrid cloud approach.
+
+You would not use CloudWatch. AWS CloudWatch allows you to monitor the AWS system in real-time by monitoring and tracking resource metrics. A metric could be the CPU utilization for an Amazon Elastic Compute Cloud (EC2) instance. You can also create a threshold for a metric and trigger an alert and/or an action when the metric reaches the defined threshold. 
+
+You would not use CloudTrail. CloudTrail keeps track of all application programming interface (API) calls made in an AWS account and records the API caller’s identity and source IP address, the time of the call, and other key information. CloudTrail records events in it 15 minutes after an API call is made. API calls are used in AWS for provisioning and managing resources. You can filter API calls in CloudTrail based on the date and time of the call, the user making the call, and the resources accessed by the call.
+
+Another AWS service you need to be aware of for the exam is the AWS Global Accelerator. This service greatly improves the performance and availability of global applications by utilizing the AWS global network infrastructure. The Global Accelerator can improve user traffic performance by up to 60% by optimizing the path to a company’s application. This keeps latency, packet loss, and jitter low. This is made possible by providing customers with two static public IP addresses that act as entry points to the application. Global Accelerator automatically routes traffic to the nearest endpoint that is healthy, ensuring that endpoint failure is mitigated. This way you can modify application endpoints, including load balancers, EC2 instances, and elastic IP, in the backend, without the need to make any changes that face your end users.
+
+You would use AWS License Manager which is an AWS service that simplifies the management of software licenses from multiple vendors, including IBM, Oracle, SAP, and Microsoft, through a centralized system. It covers both your AWS and on-premises systems. AWS License Manager also lets you change license types between bring your own license (BYOL) and AWS-provided licenses with your licensed media. Using BYOL opportunities can help you save costs on cloud infrastructure.
+
+You would not use Amazon Rekognition. Amazon Rekognition allows you to have video and image analysis capabilities in your applications.
+
+You would not use Amazon Forecast. Amazon Forecast provides accurate, time-series forecasts using ML and statistical algorithms.
+
+You would not use AWS X-Ray. AWS X-Ray provides detailed data on requests that your application serves.
+
+Amazon Elastic File Storage (EFS) and Elastic Block Storage (EBS) are both technologies used for block storage. 
+
+Amazon Simple Storage Service (S3) is not used for block storage but for object storage. Amazon Elastic Compute Cloud (EC2) is used for computing resources and not dedicated to block storage. Relational Database Service (RDS) is a managed database service from AWS that supports various database engines, including MySQL and PostgreSQL.
+
+AWS provides various core services across several categories, which include:
+
+- Compute – You use EC2 instances for processing and AWS Lambda for serverless computing.
+- Storage – You use Amazon S3, EBS, and EFS for storage.
+- Network – You use Amazon Route53 for domain name management and routing.
+- Database – You use RDS for using a fully managed relational database and DynamoDB, which is a serverless key value pair database.
+
+Economy of scale is the concept that a cloud user will gain cost benefits from the large numbers of other users also using the cloud provider’s services. 
+
+There are some distinct benefits of cloud computing with AWS, which are outlined below:
+
+- Security – Through a shared responsibility model and best practices, you can ensure greater safety of your operations using AWS Cloud. These practices include enforcing strong permission policies and implementing data encryption.
+
+- Reliability – This helps you ensure your workloads can perform correctly, handle failures, and automatically fix any issues that may arise. This also covers data backups and fault isolation and ensures your systems are prepared for disaster scenarios.
+
+- High Availability – This ensures that your applications are always ready to swiftly serve customers with little to no downtime. A measure of availability is five 9s, which corresponds to a system being available 99.999% of the time.
+
+- Elasticity – This is the ability to scale your computing resources to match consumer demand without having to manually perform resource provisioning or guess future capacity needs.
+
+- Agility – This is the ability to swiftly deploy new applications by removing unnecessary operational overhead so that the development team can focus on creating and innovating products.
+
+- Pay-as-you go (PAYG) pricing – This is a flexible payment option where a cloud consumer only pays for resources consumed.
+
+- Scalability – This is using the right technology to easily make your application meet growing demands at a massive scale. Using serverless technologies like AWS Lambda and DynamoDB makes this happen.
+
+- Global Reach – Using edge locations and data centers around the world, AWS Cloud’s Global Infrastructure can improve user experience with low latency for end users regardless of their location.
+
+- Economy of scale – This is having lower pay-as-you-go (PAYG) pricing due to accumulated cloud usage from a large number of cloud customers.
+
+You will use AWS Internet of Things (IoT) Core. AWS IoT Core is a technology that you use for connecting IoT devices to the cloud securely and easily. AWS IoT Core offers messaging features that are MQTT-based which help create scalable, efficient, and cost-optimized IoT architectures. MQTT is a messaging protocol for machine-to-machine communication. A related system, AWS IoT Greengrass enables you to bring cloud capabilities to a local device. You can use IoT Greengrass to create IoT devices and logic for IoT applications. With IoT Greengrass you can manage application logic running on devices using the cloud. The main difference between IoT Core and Greengrass is that IoT Core is a cloud service running on the cloud while IoT Greengrass is an edge runtime.
+
+AWS Control Tower is a service that allows you to manage a multi-account AWS system and orchestrate several AWS services such as AWS Organizations and AWS IAM Identity Center. It provides landing zones, which are environments that contain all the organizational units (OUs), users, and resources that you need to keep within compliance regulation.
+
+You will not use AWS Launch Wizard. Launch Wizard is a system used to size, configure, and deploy AWS resources for various third-party systems like HANA based SAP systems and Microsoft SQL Server Always On. SAP High-performance ANalytic Appliance (HANA) is a database system which stores data in memory instead of storing it on a disk. This simplifies deployment of applications and automates the process of selecting AWS resources and estimating costs.
+
+You will not use Amazon Connect. This is a cloud contact center service that enables you to use omnichannel communications for creating personalized experiences for your users. With Amazon Connect you can offer chat and voice support using factors like tentative wait times and customer preferences.
+
+You would most commonly use an inline policy because it gives you the ability to control and maintain a strict correlation between the principal entity and the policy itself. When you use an inline policy, it limits the ability to make mistakes by accidentally attaching the wrong principal entity. It does this by associating the principal entity and the policy together so that when you delete the principal entity, the policy is also deleted.
+
+AWS bucket policy is not correct because you would use this type of policy for managing groups of users within the Amazon Simple Storage Service (S3) infrastructure as compared to individual users.
+
+AWS managed policy is not correct because this is a policy created by Amazon and is not a policy that is managed by the customer in any form.
+
+AWS Identity and Access Management (IAM) user policy is not correct because this policy is for managing and administering only AWS user access to the AWS infrastructure.
+
+Spot Instances are good for security testing, developing, integration, and validating overall loads on a system. They are viable for any type of workload that is classified as non-time sensitive, meaning the workload does not have to start or stop at a specific time. This is different from On-Demand Instances because they will be used during times that, although spiky, are used during key times of the business day to support the overall business.
+
+On-Demand Instances are good solutions for application workloads that are spiky, short term, and/or unpredictable. This option is flexible and low cost because there are no long contracts and no upfront payments. For On-Demand Instances, you are paying per second or per hour, based on the instance configuration you choose. When your application workload spikes, your system will dynamically allocate your pre-determined On-Demand Instance to help alleviate your total CPU and memory workload concerns. The price will vary based on overall workload activity.
+
+Dedicated Hosts are physical servers that are owned and supported by Amazon. One of their main benefits is the reduction in licensing costs of traditional systems related to software licenses. These systems are good for the compliance requirements for external vendors and other internal support needs. They are purchased on an hourly basis, similar to On-Demand solutions. Finally, they can be acquired as a Reserved server at a greatly reduced price. This type of instance could be costly for testing environments for a project.
+
+Reserved Instances are good for environments that plan to use Amazon Elastic Compute Cloud (EC2) instances for between one and three years. These instances support applications that are online 24/7 and have an anticipated and well-known workload pattern. They are classified as supporting the base workload. Any abnormal increase in workload should be managed by Spot or On-Demand Instances.
+
+You would use AWS Audit Manager which is a service that simplifies the process of risk and compliance management as per industry standards and regulations. It performs automation for evidence collection and allows you to assess the correct working of controls, including activities, procedures, and policies. During a scheduled audit, AWS Audit Manager enables the management of stakeholder review of controls which eases the process of creating reports that are audit ready.
+
+You would not use AWS Certificate Manager (ACM). ACM helps you create, store, and renew public and private Secure Sockets Layer (SSL)/Transport Layer Security (TLS) X.509 certificates and encryption keys that are used for protecting your AWS applications and websites. You can deploy ACM certificates via Amazon CloudFront, Amazon Application Programming Interface (API) Gateway, or Elastic Load Balancing.
+
+You would not use Amazon Detective. This is a service for identifying, analyzing, and investigating the underlying causes of suspicious activities. Detective collects AWS resource log data automatically and generates visualizations using graph theory, machine learning (ML), and statistical analysis for fast and efficient investigation of security issues.
+
+You would not use AWS Directory Service. This is a service providing several means to utilize Microsoft Active Directory (AD) with AWS services. AWS Directory Service provides a choice of multiple directories and allows the use of applications that are aware of Lightweight Directory Access Protocol (LDAP) and Microsoft AD. A directory stores data related to devices, users, and groups. An administrator can use directories for managing access to resources and data.
