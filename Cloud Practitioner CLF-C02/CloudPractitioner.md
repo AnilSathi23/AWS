@@ -385,3 +385,58 @@ You would not use AWS Certificate Manager (ACM). ACM helps you create, store, an
 You would not use Amazon Detective. This is a service for identifying, analyzing, and investigating the underlying causes of suspicious activities. Detective collects AWS resource log data automatically and generates visualizations using graph theory, machine learning (ML), and statistical analysis for fast and efficient investigation of security issues.
 
 You would not use AWS Directory Service. This is a service providing several means to utilize Microsoft Active Directory (AD) with AWS services. AWS Directory Service provides a choice of multiple directories and allows the use of applications that are aware of Lightweight Directory Access Protocol (LDAP) and Microsoft AD. A directory stores data related to devices, users, and groups. An administrator can use directories for managing access to resources and data.
+
+The r4.large instance type supports memory-intensive applications. It is a cheaper price option compared to the R3 instance types. Some of the key features of the R4 optimized instance types are enhanced network, double data rate fourth generation (DDR4) memory, and Intel Xeon processors. A good use case for this type of instance is real-time analysis utilizing big data and large in-memory caching applications.
+
+t2.nano is classified as a general-purpose instance type. You would not associate large in-memory applications with this instance type.
+
+c4.large is classified as a compute-optimized instance family and not a memory-intensive instance family.
+
+d2.xlarge is classified as a storage-optimized instance family and not a memory-intensive instance family. This instance type is good for applications that require larger amounts of IOPS when reading and writing to disk.
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+By Default CloudWatch log groups are retained indefinately
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+![alt text](image-9.png)
+
+![alt text](image-10.png)
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
+
+![alt text](image-13.png)
+
+![alt text](image-14.png)
+
+Amazon Connect allows you to create a call center in the cloud
+
+![alt text](image-15.png)
+
+![alt text](image-16.png)
+
+![alt text](image-17.png)
+
+![alt text](image-18.png)
+
+![alt text](image-19.png)
+
+![alt text](image-20.png)
+
+![alt text](image-21.png)
+
