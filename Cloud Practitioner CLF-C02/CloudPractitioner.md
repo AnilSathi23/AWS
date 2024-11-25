@@ -394,6 +394,94 @@ c4.large is classified as a compute-optimized instance family and not a memory-i
 
 d2.xlarge is classified as a storage-optimized instance family and not a memory-intensive instance family. This instance type is good for applications that require larger amounts of IOPS when reading and writing to disk.
 
+You would use AWS Activate. AWS Activate is a startup program from AWS that provides resources and tools such as AWS credits to eligible startups. Activate Portfolio and Activate Founders are two program tiers available on AWS Activate.
+
+You would not use AWS Managed Services (AMS). AMS is a service by AWS for managing and operating your AWS infrastructure for you. It is a managed service provider (MSP) that Amazon runs and performs cloud operations and infrastructure management with support services.
+
+You would not use AWS AppConfig. AWS AppConfig allows you to configure, validate, deploy, and monitor your application configuration. It has validators that can perform semantic checks using AWS Lambda functions or syntactic checks using JavaScript Object Notation (JSON) schemas.
+
+You would not use AWS Glue. AWS Glue is an extract, transform, and load (ETL) service used for various ML applications for the categorization, cleaning, and enrichment of data before storing it as processed data in S3.
+
+An AWS Identity and Access Management (IAM) user can be created for an AWS account. You can create multiple IAM users to manage multiple resources. You can create an IAM user for a person, service, or even application to utilize specific AWS resources. All of this can be done through the AWS console, direct application programming interface (API), or by using command line interface (CLI) components. Amazon best practices are to create an IAM user for every user that needs access to AWS resources. You should always use the least privilege rule, which means granting only the minimum privileges required based on job functionality. You can also leverage fine-grained permissions to each IAM user from within the AWS account.
+
+A root user is the main user within each AWS account. The account should never be used to support an application, person, or service. This account has full access to all AWS resources and to private billing information as well. This is an incorrect answer because Amazon does not recommend this privileged user role be used to support Amazon services.
+
+An IAM group is a security solution for managing several IAM users and gives you the ability to specify security permissions to the entire group. This choice is incorrect because it is considered a group and not a specific user. The correlation to a group is that you would grant permissions to the group and then assign people/users to specific groups, and they will inherit the group’s permissions.
+
+Federated users are typically granted temporary access to AWS resources and are considered external users like that of a local Lightweight Directory Access Protocol (LDAP) group. This option is incorrect because federated users are considered external to the AWS infrastructure.
+
+You would use the AWS Resource Groups service for managing and automating tasks performed on multiple resources at the same time. Resources on AWS include AWS CloudFormation stacks, Amazon Elastic Compute Cloud (EC2) instances, and Amazon Simple Storage Service (S3) buckets. You organize your AWS resources by using resource groups. To create and manage resource groups, you access the AWS Resource Groups service from the Resource Groups & Tag Editor option under the Management & Governance section of the AWS Management Console. You also need to know about AWS Systems Manager which is a centralized way to view and control a complete AWS infrastructure. You can view operational data spanning multiple AWS services from a single user interface using AWS Systems Manager and perform automation of operational tasks on AWS resources.
+
+You would not use AWS Launch Wizard. Launch Wizard is a system used to size, configure, and deploy AWS resources for various third-party systems such as HANA-based SAP and Microsoft SQL Server Always On. SAP High-performance ANalytic Appliance (HANA) is a database system that stores data in memory instead of on a disk.
+
+You would not use AWS Application Discovery Service. This is a service for planning a migration to AWS that collects configuration and usage data of on-premises databases and servers. It is linked with AWS Migration Hub and AWS Database Migration Service Fleet Advisor.
+
+You would not use AWS Application Migration Service (MGN). This is a service for providing automation for a lift-and-shift migration to AWS. It reduces the cost of migration to AWS. MGN removes any issues with compatibility, disruption of performance, and long cutover windows, and enables the lifting and shifting of a large number of cloud, virtual, or physical servers.
+
+You would use rehosting, also referred to as “lift and shift”. In this strategy, little to no changes are made to the application itself while moving to a cloud deployment.
+
+You would not use replatforming. This strategy involves changing certain parts of an application to achieve improvements in a cloud deployment without changing the underlying core of the application. This strategy is also referred to as “lift, tinker, and shift.”
+
+You would not use repurchasing. This strategy calls for replacing an existing application with a new one that is cloud-based. This new cloud-based application can be acquired from AWS Marketplace.
+
+You would not use refactoring. This strategy involves making changes to the architecture of an application by incorporating various features that are native to cloud technology.
+
+Two other migration strategies include retaining and retiring. Retaining is a strategy that involves keeping all the applications that may be mission critical for the business within their original environment. Retiring is a strategy that involves discarding any applications that are no longer required.
+
+Elastic IP addresses (EIPs) incur a cost on your AWS account whether they are used or not. An Elastic IP address is a static and public IP address that AWS uses to allow their customer to use as they see fit. These IP addresses are pooled and used based on the customer’s AWS account. They stay associated with your AWS account, with the associated costs, until they are deliberately released. Also, EIPs are fixed to a Region and cannot be used within other Regions. EIPs are synonymous with your network interface and are assigned to instances within your virtual private cloud (VPC).
+
+EIPs are different from the network interface is an incorrect choice. EIPs are synonymous with your network interface.
+
+EIPs can be moved to another instance in a different Region is an incorrect choice. EIPs are assigned within your specific Region and cannot be used in a different Region.
+
+EIPs can be dynamically reallocated from your AWS account is not correct. Actually, EIPs have to specifically be released from your AWS account.
+
+Resource tagging acts as a pointer or a label assigned to an AWS resource. These tags are comprised of an AWS key and a unique optional value. You can also manage these tags as you see fit. These types of tags allow you to categorize Amazon resources in multiple different facets. For example, you can manage AWS resources by owner, purpose, or by the environment type. You can also use tags to track Amazon Elastic Compute Cloud (EC2) instance stack level and by owner.
+
+CPU utilization is a metric used for monitoring CPU capacities associated with a specific EC2 instance. This is not correct because you cannot use CPU utilization as a tagging option within the Amazon EC2 interface.
+
+Memory utilization is also a metric used for monitoring memory components within a unique EC2 environment. This option is not correct because you could not use it to track or tag groups of EC2 instances.
+
+Instance metadata is information related to an EC2 instance like a security group or an IP address associated with the instance. You cannot use the metadata to alias or group sets of EC2 instances together. It is simply EC2 data that describes the data structures.
+
+Amazon CloudWatch metrics automatically expire after 15 months when no data is published into them. Metrics are a basic CloudWatch concept which represent a set of data points that are time-ordered. A metric is a variable that can be monitored and each data point is a value of that variable at a specific time.
+
+You can monitor disk reads and writes and even CPU information that can help you determine if you need to add additional Amazon Elastic Compute Cloud (EC2) instances for load balancing purposes.
+
+15 days, 1 month (30 days), and 6 months are all incorrect choices because CloudWatch automatically expires metrics after 15 months. A data point older than 15 months expires as new data points arrive.
+
+You will use AWS Amplify which is a set of tools including a visual development environment and open-source framework and services including static website and web app hosting. Amplify helps users speed up web and mobile application development on AWS. The open-source framework of AWS Amplify includes UI components, command line interface (CLI, and libraries. A related technology AWS Device Farm allows you to test your apps on actual web browsers, Android devices, and iOS devices.
+
+You will not use AWS AppSync which is a managed service for GraphQL Application Programming Interface (API). GraphQL is a language for querying APIs and fulfills those queries on your existing data using runtimes. AppSync can be used for securely connecting services and applications to events and data using high-performing and serverless GraphQL APIs. AppSync can be used for publishing real-time updates to applications.
+
+You will not use AWS Compute Optimizer. This service is used for analyzing the configuration and metrics related to utilization for AWS resources. It helps you improve workload performance and cost optimization by providing reports indicating whether resources are optimal. It used graphs to indicate utilization metric history as well as recommending projected utilization. You can use this information for selecting a recommendation that provides you with the best price to performance ratio.
+
+You will not use Amazon WorkSpaces Web which is a WorkSpaces capability suitable for web-based workloads that are secure. Amazon WorkSpaces enables you to provision WorkSpaces which include virtual desktops for Ubuntu Linux, Microsoft Windows, or Amazon Linux.
+
+Performance Efficiency is a framework pillar that supports computing resources to maintain and meet business requirements as technologies change over time within the AWS infrastructure. The principles of Performance Efficiency are going global, implementing serverless technologies, experimenting with development, and mechanical sympathy.
+
+The five design principles of Operational Excellence in the cloud are documentation, frequent and small changes, operations as code, refining procedures quickly, and anticipating system failure. This pillar is not focused on performance.
+
+Cost Optimization is focused more on cost and less on the performance aspects of the AWS infrastructure.
+
+Reliability is focused on the stability of AWS systems and their ability to support business value with long uptimes and durable systems. This pillar is not focused on performance but on dependability and service times.
+
+You would use Amazon Polly. Amazon Polly provides text-to-speech capabilities that help you create more engaging and accessible applications. Polly has support for multiple languages and has a wide repository of lifelike voices, allowing you to create speech-enabled applications that can be used across many different locations with the right voice for each location. Polly has various neural text-to-speech (NTTS) voices that utilize machine learning (ML) technology, creating very natural human-like text-to-speech capabilities. This allows for creating newscaster style voices that are ideal for news-narrating requirements.
+
+You would not use Deep Learning Amazon Machine Images (AMIs) for this scenario. AWS Deep Learning AMIs allow you to launch Amazon Elastic Compute Cloud (EC2) instances that are pre-loaded with Deep Learning interfaces and frameworks, including PyTorch, TensorFlow, Chainer, and MXNet. This allows you to perform training for customized artificial intelligence (AI) models as well as work with new kinds of algorithms.
+
+You would not use Translate. Amazon Translate allows you to translate text using ML technologies. You use Translate for creating applications that can work across several languages as well as translating unstructured text. You can use Translate to convert various types of content, including media feeds, reports, articles, and meeting notes. You can also translate communication, like chats and emails, for communication in preferred languages.
+
+You would not use Forecast. Amazon Forecast provides accurate time-series forecasts using ML and statistical algorithms. It utilizes the same time-series forecasting technology that is used for Amazon.com and predicts future data using historical data without any required ML experience. This is a useful service for fields like logistics, healthcare, finance, and retail. Forecast can be used for making predictions for metrics related to workforce, Internet traffic, economics, server needs, and corporate inventory.
+
+Data transferred across AWS Regions is charged. All traffic crossing regional boundaries is chargeable. To reduce costs, you can only use cross-Region data transfer when the business needs it. For an AWS resource, you incur charges for both outbound and inbound traffic in a data transfer inside of an AWS Region.
+
+Data transferred from the Internet into AWS is not charged. Inbound data transfer across all Regions and services in AWS is free. However, data transfer from AWS to the internet is chargeable. The charges for this vary by services with rates depending on the Region where the data transfer originates. There is also no charge for data transferred into a destination Region.
+
+Data transfer within an Availability Zone does not incur any charges. This is in exception to VPC peering connections where data transfer charges are applicable for ingress/egress traffic crossing Availability Zones. For ensuring high availability for your workloads, you need to deploy each workload into several Availability Zones.
+
+Replication between primary and standby instances in separate Availability Zones does not incur charges. You can reduce the impact of instance failure for databases by enabling a multi-Availability Zone configuration with Amazon Relational Database Service (RDS). However, data transfer charges apply from users that are outside the Availability Zone of the primary instance.
+
 ![alt text](image-1.png)
 
 ![alt text](image-2.png)
