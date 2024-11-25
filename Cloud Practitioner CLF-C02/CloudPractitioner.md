@@ -440,3 +440,7 @@ Amazon Connect allows you to create a call center in the cloud
 
 ![alt text](image-21.png)
 
+![alt text](image-22.png)
+
+![alt text](image-23.png)
+
