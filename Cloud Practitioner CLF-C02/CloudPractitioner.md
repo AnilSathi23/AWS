@@ -598,3 +598,21 @@ IAM role access keys are rotated by design.
 
 ![alt text](image-55.png)
 
+Total cost of ownership is to be considered when evaluating the cloud infrastructure.
+
+![alt text](image-56.png)
+
+![alt text](image-57.png)
+
+![alt text](image-58.png)
+
+![alt text](image-59.png)
+
+![alt text](image-60.png)
+
+![alt text](image-61.png)
+
+![alt text](image-62.png)
+
+![alt text](image-63.png)
+
