@@ -1,5 +1,7 @@
 # AWS
 
+**read white paper about well archiected framework**
+
 https://aws.amazon.com/
 https://infrastructure.aws/
 
@@ -53,4 +55,47 @@ API query
 VPC peering -- connecting 2 different networks
 
 DNS : is used ot translate readable human domain names to IP addreses
+
+
+
+sudo su
+yum update -y
+yum install httpd
+systemctl start httpd
+systemctl enable httpd
+echo "Hello World" > /var/www/html/index.html
+ 
+curl http://169.254.169.254/latest/meta-data
+curl http://169.254.169.254/latest/meta-data/ami-id
+curl http://169.254.169.254/latest/meta-data/hostname
+curl http://169.254.169.254/latest/meta-data/instance-id
+curl http://169.254.169.254/latest/meta-data/instance-type
+ 
+curl http://169.254.169.254/latest/dynamic
+curl http://169.254.169.254/latest/dynamic/instance-identity
+curl http://169.254.169.254/latest/dynamic/instance-identity/document
+ 
+curl -s http://169.254.169.254/latest/dynamic/instance-identity/document > /var/www/html/index.html
+
+
+Course Update for Step 05: Getting Meta data and Dynamic data
+To improve security, Instance Metadata Service v2 (IMDSv2), now needs authentication token to get meta-data or dynamic data
+
+Step 1: Get the token
+
+TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+
+Step 2a: Use the token to call meta-data
+
+curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/
+
+OR Step 2b: Use the token to call dynamic data
+
+TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/dynamic/instance-identity/
+
+TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/dynamic/instance-identity/ > /var/www/html/index.html
+
+
 
