@@ -98,4 +98,24 @@ TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-meta
 curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/dynamic/instance-identity/ > /var/www/html/index.html
 
 
+User-Data
 
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+curl -s http://169.254.169.254/latest/dynamic/instance-identity/document > /var/www/html/index.html
+
+
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+curl -s http://169.254.169.254/latest/dynamic/instance-identity/document > /var/www/html/index.html
+
+#!/bin/bash
+curl -s http://169.254.169.254/latest/dynamic/instance-identity/document > /var/www/html/index.html
+mkdir /var/www/html/a
+echo “Microservice A” > /var/www/html/a/test.html
